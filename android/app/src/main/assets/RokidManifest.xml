@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:rokid="http://www.rokid-inc.com">
+    <application rokid:isSystem="false" rokid:package="com.rokid.react" rokid:type="cut"
+        rokid:version="0.0.1"></application>
+</manifest>
+
+

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="com.rokid.react" suffix="yml" final="true">
+    <item name="any" output="true" empty="true" minlen="1" maxlen="20">
+    </item>
+    <item name="any2" output="true" empty="true" minlen="2" maxlen="20">
+    </item>
+
+    <item name="any3" output="true" empty="true" minlen="2" maxlen="20">
+    </item>
+
+    <item name="any4" output="true" empty="true" minlen="3" maxlen="15">
+    </item>
+    
+    <item name="questionwordsbeginning" output="true">
+        <set>什么是</set>
+    </item>
+    <item name="whois" output="true">
+        <set>谁是</set>
+    </item>
+    <item name="iswho" output="true">
+        <set>是谁</set>
+        <set>是什么人</set>
+    </item>
+
+    <item name="questionwordsending" output="true">
+        <set>是什么</set>
+    </item>
+
+
+    <item name="auxilaries" output="true">
+        <set>吗</set>
+        <set>啊</set>
+        <set>呢</set>
+        <set>哦</set>
+        <set>嘛</set>
+        <set>呀</set>
+    </item>
+
+
+
+    <item name="introduce" output="true">
+        <set>解释(一)?下</set>
+        <set>介绍(一)?下</set>
+        <set>说一?说</set>
+        <set>讲一?讲</set>
+        <set>说说看</set>
+        <set>讲讲看</set>
+    </item>
+
+    <item name="iwantknow">
+        <set>(你((能)|(可以)) )告诉我</set>
+        <set>我想知道</set>
+        <set>我要知道</set>
+        <set>我想要知道</set>
+        <set>我要了解</set>
+        <set>我想了解</set>
+        <set>我想搞清楚</set>
+        <set>我想问你</set>
+    </item>
+
+    <item name="doyouknow">
+        <set>你知道</set>
+        <set>你懂不懂</set>
+        <set>你明白</set>
+        <set>你了解</set>
+    </item>
+
+    <item name="how">
+        <set>怎么样</set>
+        <set>怎样</set>
+        <set>如何</set>
+        <set>好不好</set>
+        <set>好吗</set>
+        <set>差吗</set>
+    </item>
+
+    <item name="questionwordmiddle" output="true">
+        <set>为什么是</set>
+        <set>为什么会</set>
+        <set>为什么</set>
+        <set>怎么会是</set>
+        <set>怎么会</set>
+    </item>
+
+    <item name="why" output="true">
+         <set>为什么</set>
+    </item>
+
+    <patternlist intent="reactsdk_test">
+	<pattern T="1">
+            <value>测试应用框架</value>
+            <output name="tnumber">201</output>
+        </pattern>
+    </patternlist>
+
+    <patternlist intent="reactsdk_gesture_test">
+	<pattern T="1">
+            <value>测试手势封装</value>
+            <output name="tnumber">202</output>
+        </pattern>
+    </patternlist>
+
+</package>

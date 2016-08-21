@@ -1,0 +1,3 @@
+rootProject.name = 'rkreact'
+
+include ':app', ':rokid-framework-react-native', ':rokidviewlibrary-release'
