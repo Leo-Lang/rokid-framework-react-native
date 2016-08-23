@@ -1,3 +1,4 @@
 rootProject.name = 'rkreact'
 
-include ':app', ':rokid-framework-react-native', ':rokidviewlibrary-release'
+include ':app', ':rokid-framework-react-native', ':rokidviewlibrary-release',':react-native-rokid-module'
+project(':react-native-rokid-module').projectDir = new File(rootProject.projectDir,'../node_modules/react-native-rokid-module/ReactAndroid')
