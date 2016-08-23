@@ -1,12 +1,24 @@
 {
-  "name": "rkreact",
+  "name": "rokid-framework-react-native",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
     "react": "^0.14.8",
     "react-native": "^0.22.2"
-  }
+  },
+  "description": "",
+  "main": "index.android.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leo-Lang/rokid-framework-react-native.git"
+  },
+  "author": "leolang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leo-Lang/rokid-framework-react-native/issues"
+  },
+  "homepage": "https://github.com/Leo-Lang/rokid-framework-react-native"
 }
