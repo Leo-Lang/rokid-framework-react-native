@@ -46,7 +46,7 @@ protected List<ReactPackage> getPackages() {
 ###js
 
 ```
-import RKReactNative from './node_modules/rokid-framework-react-native/rokid/rkreact';
+import RKReactNative from 'rokid-framework-react-native';
 
 
 ```

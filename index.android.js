@@ -13,7 +13,7 @@ import {
 
 import TTS_demo from './rokid/example/rokid_tts_demo';
 import CV_demo from './rokid/example/rokid_cv_demo';
-
+import RKReactNative from 'rokid-framework-react-native';
 
 class rkreact extends Component {
   render() {

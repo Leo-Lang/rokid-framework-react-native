@@ -1,6 +1,6 @@
 {
   "name": "rokid-framework-react-native",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
@@ -10,7 +10,7 @@
     "react-native-rokid-module": "0.0.1"
   },
   "description": "",
-  "main": "index.android.js",
+  "main": "rokid/rkreact.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
