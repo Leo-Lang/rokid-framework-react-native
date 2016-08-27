@@ -1,6 +1,6 @@
-import React, {
+import React, { Component } from 'react';
+import  {
     AppRegistry,
-    Component,
     Animated,
     Easing,
     View,
@@ -11,7 +11,8 @@ import React, {
     DeviceEventEmitter,
     AppState,
     BackAndroid,
-    ListView
+    ListView,
+    NativeModules
 } from 'react-native';
 
 
@@ -32,7 +33,7 @@ class CV_demo extends React.Component {
 	this.keyboardHideObserver = DeviceEventEmitter.addListener('RNIntent', (intent) => {
 
                 console.log("laoliang nlp intent:" + intent);
-		//decode intent, which is a json string 
+		//decode intent, which is a json string
                 var nlp = JSON.parse(intent);
                 if (nlp.intent === "reactsdk_gesture_test") {
 		    //set 30s timeout, after that, reporting detecting result according to status lable - gestureDetected
@@ -41,11 +42,11 @@ class CV_demo extends React.Component {
 			    console.log("gesture: not detected!");
 			}else{
 			    console.log("gesture: palm detected!");
-			}		
+			}
 		    },30000);
 		    //call function through imported interface of RKReactNative, activate palm gesture detection by call function
 		    //of rokid sdk, meanwhile setting both error and success callback
-		    RKReactNative.redqueenService.detectGesturePalm("react_gesture_test", 
+		    RKReactNative.redqueenService.detectGesturePalm("react_gesture_test",
 			(e)=>{console.log("laoliang: " + e+" gesture: failed to detect palm");},
 			(e)=>{console.log("laoliang: " + e+" gesture: success in detecting palm");gestureDetected=true})
 
@@ -54,7 +55,7 @@ class CV_demo extends React.Component {
                 }
             });
 
-	
+
 	var RKReactEventManager = React.NativeModules.ReactEventManager;
         console.log("langneng RKReactEventManager:" + RKReactEventManager);
         RKReactEventManager.notifyEventChannelReady(true);

@@ -8,7 +8,6 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.leolang.rokidframework.react.RKReactActivity;
 import com.leolang.rokidframework.react.RKReactPackage;
-import com.rokid.react.BuildConfig;
 
 import java.util.Arrays;
 import java.util.List;

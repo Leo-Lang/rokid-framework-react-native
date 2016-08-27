@@ -1,6 +1,6 @@
-import React, {
+import React, { Component } from 'react';
+import  {
     AppRegistry,
-    Component,
     Animated,
     Easing,
     View,
@@ -11,7 +11,8 @@ import React, {
     DeviceEventEmitter,
     AppState,
     BackAndroid,
-    ListView
+    ListView,
+    NativeModules
 } from 'react-native';
 
 import RKReactNative from '../rkreact';

@@ -1,8 +1,8 @@
 {
   "name": "rokid-framework-react-native",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native-rokid-module/local-cli/cli.js start"
   },
   "dependencies": {
     "react": "15.1.0",
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "https://github.com/Leo-Lang/rokid-framework-react-native.git"
   },
-  "author": "leolang langneng@rokid.com(https://github.com/Leo-Lang)",
+  "author": "leolang langneng@rokid.com (https://github.com/Leo-Lang)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Leo-Lang/rokid-framework-react-native/issues"

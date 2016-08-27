@@ -11,6 +11,7 @@ import com.leolang.rokidframework.nirvana.RKReactEventManager;
 import com.leolang.rokidframework.nirvana.RKReactLoadingViewManager;
 import com.leolang.rokidframework.nirvana.RKReactServiceManager;
 import com.leolang.rokidframework.nirvana.TTS.TTSModule;
+import com.leolang.rokidframework.nirvana.confirm.ConfirmModule;
 import com.leolang.rokidframework.nirvana.cv.RedqueenModule;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class RKReactPackage implements ReactPackage {
         modules.add(new RKReactServiceManager(reactContext));
         modules.add(new TTSModule(reactContext));
         modules.add(new RedqueenModule(reactContext));
+        modules.add(new ConfirmModule(reactContext));
         return modules;
     }
 

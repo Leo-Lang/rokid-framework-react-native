@@ -91,7 +91,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.rokid.react"
+        applicationId "com.rokid"
         minSdkVersion 19
         targetSdkVersion 22
         versionCode 1

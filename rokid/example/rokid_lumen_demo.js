@@ -32,11 +32,11 @@ class LumenDemo extends React.Component {
 	this.keyboardHideObserver = DeviceEventEmitter.addListener('RNIntent', (intent) => {
 
                 console.log("lumen example nlp intent:" + intent);
-		//decode intent, which is a json string 
+		//decode intent, which is a json string
                 var nlp = JSON.parse(intent);
             });
 
-	
+
 	//var RKReactEventManager = React.NativeModules.ReactEventManager;
         //RKReactEventManager.notifyEventChannelReady(true);
     }
