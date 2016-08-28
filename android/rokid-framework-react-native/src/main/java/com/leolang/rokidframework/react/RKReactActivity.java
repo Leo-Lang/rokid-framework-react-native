@@ -23,7 +23,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class RKReactActivity extends ReactActivity {
     private final String TAG = "RKReactActivity";
-    private final String RN_INTENT = "RNIntent";
+    public static final String RK_INTENT = "RKIntent";
     private final int THREAD_NUM = 8;
     private static RKReactEventListener mRKReactEventListener;
     private static RKGestureEventListener mRKGestureEventListener;
@@ -118,7 +118,7 @@ public class RKReactActivity extends ReactActivity {
                     if (event_nlp == null || event_nlp.length() <= 0) {
                         return;
                     }
-                    mRKReactEventListener.sendEvent(RN_INTENT, event_nlp);
+                    mRKReactEventListener.sendEvent(RK_INTENT, event_nlp);
                     break;
                 }
                 try {

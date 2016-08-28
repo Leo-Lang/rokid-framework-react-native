@@ -1,5 +1,5 @@
 var RKReactConfirmService = require("NativeModules").ConfirmService;
-                                     
+
 var confirmService= {
     confirmContent:function(domain,intent,ttsContent,slot,errorCalllback,successCallback){
         console.log("langneng confirmService confirmContent");

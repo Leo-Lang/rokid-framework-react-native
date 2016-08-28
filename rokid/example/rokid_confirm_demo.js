@@ -35,7 +35,7 @@ class Confirm_demo extends React.Component{
     //       console.log("langneng confirmContent successMsg:"+successMsg);
     //  });
 
-     RKReactNative.confirmService.confirmIf("movie","buy","确定购买吗",{
+    RKReactNative.confirmService.confirmIf("movie","buy","确定购买吗",{
     name: '谍影重重',
     time: '21:00'
     },(errorMsg)=>{

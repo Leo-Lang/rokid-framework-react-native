@@ -8,6 +8,9 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.leolang.rokidframework.react.RKReactActivity;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by langneng on 4/13/16.
  */
@@ -47,6 +50,13 @@ public class RKReactEventManager extends ReactContextBaseJavaModule implements R
     public void notifyEventChannelReady(boolean eventChannelReady){
         //Log.e(TAG,"langneng eventChannelReady:"+eventChannelReady);
         RKReactActivity.RKReactEventChannelReady = eventChannelReady;
+    }
+
+    @Override
+    public Map<String, Object> getConstants() {
+        Map<String,Object> constants = new HashMap<>();
+        constants.put(RKReactActivity.RK_INTENT,RKReactActivity.RK_INTENT);
+        return constants;
     }
 }
 

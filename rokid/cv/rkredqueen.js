@@ -41,7 +41,7 @@ var redqueenService ={
     RKRedqueenService.detectGesturePalm2Fist(callingName,errorCalllback,successCallback);
   },
 
-  //gesture motion of palm sliding detection, both slide to left and slide to right 
+  //gesture motion of palm sliding detection, both slide to left and slide to right
   detectGesturePalmSlide:function(callingName,errorCalllback,successCallback){
     console.log("detecting gesture motion of palm sliding, both to left and to right, called by " + callingName);
     RKRedqueenService.detectGesturePalmSlide(callingName,errorCalllback,successCallback);
