@@ -1,6 +1,6 @@
 {
   "name": "rokid-framework-react-native",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "scripts": {
     "start": "node node_modules/react-native-rokid-module/local-cli/cli.js start"
   },
