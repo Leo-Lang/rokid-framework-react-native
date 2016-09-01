@@ -148,31 +148,31 @@ public class TTSModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void playLastTTS() {
         Log.d(TAG, "android playLastTTS");
-        try {
-            mTTS.playLastTTS();
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            mTTS.playLastTTS();
+//        } catch (RemoteException e) {
+//            e.printStackTrace();
+//        }
     }
 
     @ReactMethod
     public void volumeUp() {
         Log.d(TAG,"android tts volumeUp");
-        try {
-            mTTS.volumeUp();
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            mTTS.volumeUp();
+//        } catch (RemoteException e) {
+//            e.printStackTrace();
+//        }
     }
 
     @ReactMethod
     public void volumeDown() {
         Log.d(TAG,"android tts volumeDown");
-        try {
-            mTTS.volumeDown();
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            mTTS.volumeDown();
+//        } catch (RemoteException e) {
+//            e.printStackTrace();
+//        }
     }
 
 
