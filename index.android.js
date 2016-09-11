@@ -11,6 +11,7 @@ import {
   View
 } from 'react-native';
 
+import Sysinfo_demo from './rokid/example/rokid_sysinfo_demo';
 import TTS_demo from './rokid/example/rokid_tts_demo';
 import CV_demo from './rokid/example/rokid_cv_demo';
 import Confirm_demo from './rokid/example/rokid_confirm_demo';
@@ -22,7 +23,7 @@ import RKReactNative from 'rokid-framework-react-native';
 class rkreact extends Component {
   render() {
     return (
-        <Mobile_demo></Mobile_demo>
+        <Sysinfo_demo></Sysinfo_demo>
     );
   }
 }
