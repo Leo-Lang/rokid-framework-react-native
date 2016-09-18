@@ -133,11 +133,25 @@ public class SysinfoModule extends ReactContextBaseJavaModule {
         return sysinfo;
     }
 
-    private String getMaster(){
-        SharedPreferences sp = mReactContext.getSharedPreferences("masterName", mReactContext.MODE_PRIVATE);
-        String name = sp.getString("name", "");
-        return name;
 
+    private String getMaster(){
+        IRKAccountManager accountProxy;
+        accountProxy = (IRKAccountManager) RokidContext.getInstance().getSystemRemoteService(mReactContext, RokidContext.RK_ACCOUNT);
+        JSONObject json =null;
+        String masterId = "unknown";
+        if (accountProxy != null) {
+            try {
+                String rokidInfo = accountProxy.getRokidInfo();
+                json = JSONObject.parseObject(rokidInfo);
+                masterId = json.getString("masterId");
+            } catch (RemoteException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+        return masterId;
     }
 
     private String getWifiMac() {

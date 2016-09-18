@@ -21,7 +21,7 @@ project(':rokid-framework-react-native').projectDir = new File(rootProject.proje
 compile project(':rokid-framework-react-native')
 ```
 
-####3. in your `MainActivity` (or equivalent) the RKReactPackage needs to be added. Add the import at the top:
+####3. in your `MainActivity` (or equivalent) the FrameAnimReactPackage needs to be added. Add the import at the top:
 
 ```
 import com.leolang.rokidframework.react.RKReactActivity;
