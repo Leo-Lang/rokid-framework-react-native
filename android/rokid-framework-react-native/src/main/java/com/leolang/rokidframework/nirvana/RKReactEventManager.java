@@ -17,6 +17,7 @@ import java.util.Map;
 public class RKReactEventManager extends ReactContextBaseJavaModule implements RKReactEventListener {
     private static final String TAG = "RKReactEventManager";
     private static RKReactEventManager mRKReactEventManager;
+    public static Object eventChannelLock = new Object();
 
     public RKReactEventManager(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -48,8 +49,12 @@ public class RKReactEventManager extends ReactContextBaseJavaModule implements R
 
     @ReactMethod
     public void notifyEventChannelReady(boolean eventChannelReady){
-        //Log.e(TAG,"langneng eventChannelReady:"+eventChannelReady);
+        Log.e(TAG,"langneng notifyEventChannelReady:"+eventChannelReady);
         RKReactActivity.RKReactEventChannelReady = eventChannelReady;
+
+        synchronized (eventChannelLock){
+            eventChannelLock.notify();
+        }
     }
 
     @Override

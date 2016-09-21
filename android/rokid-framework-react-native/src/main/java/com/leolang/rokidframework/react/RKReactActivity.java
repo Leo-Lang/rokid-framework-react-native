@@ -12,6 +12,7 @@ import com.alibaba.fastjson.JSON;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactPackage;
 import com.leolang.rokidframework.nirvana.RKReactEventListener;
+import com.leolang.rokidframework.nirvana.RKReactEventManager;
 import com.leolang.rokidframework.nirvana.TTS.TTSModule;
 import com.leolang.rokidframework.nirvana.cv.RKGestureEventListener;
 import com.leolang.rokidframework.nirvana.cv.RedqueenModule;
@@ -109,23 +110,46 @@ public class RKReactActivity extends ReactActivity {
 
         @Override
         public void run() {
-            while (true) {
-                //Log.d(TAG, " langneng mRKReactEventListener:" + mRKReactEventListener + " RKReactEventChannelReady:" + RKReactEventChannelReady);
-                if (mRKReactEventListener != null && RKReactEventChannelReady) {
-                    String event_nlp = mIntent.getStringExtra("nlp");
-                    Log.d(TAG, "langneng sendEvent intent:" + event_nlp);
+//            while (true) {
+//                //Log.d(TAG, " langneng mRKReactEventListener:" + mRKReactEventListener + " RKReactEventChannelReady:" + RKReactEventChannelReady);
+//                if (mRKReactEventListener != null && RKReactEventChannelReady) {
+//                    String event_nlp = mIntent.getStringExtra("nlp");
+//                    Log.d(TAG, "langneng sendEvent intent:" + event_nlp);
+//
+//                    if (event_nlp == null || event_nlp.length() <= 0) {
+//                        return;
+//                    }
+//                    mRKReactEventListener.sendEvent(RK_INTENT, event_nlp);
+//                    break;
+//                }
+//                try {
+//                    Thread.sleep(1000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
 
-                    if (event_nlp == null || event_nlp.length() <= 0) {
-                        return;
-                    }
-                    mRKReactEventListener.sendEvent(RK_INTENT, event_nlp);
-                    break;
-                }
+            synchronized (RKReactEventManager.eventChannelLock) {
                 try {
-                    Thread.sleep(1000);
+                    if (!RKReactEventChannelReady) {
+                        Log.e(TAG, "langneng react event channel not ready,wait");
+                        RKReactEventManager.eventChannelLock.wait();
+                    }
+                    if (mRKReactEventListener != null && RKReactEventChannelReady) {
+                        Log.e(TAG, "langneng react event channel ready,send message");
+                        String event_nlp = mIntent.getStringExtra("nlp");
+                        Log.d(TAG, "langneng sendEvent intent:" + event_nlp);
+
+                        if (event_nlp == null || event_nlp.length() <= 0) {
+                            return;
+                        }
+                        mRKReactEventListener.sendEvent(RK_INTENT, event_nlp);
+                    }
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+
             }
         }
     }
