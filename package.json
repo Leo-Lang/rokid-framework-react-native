@@ -1,5 +1,5 @@
 {
-  "name": "rokid-framework-react-native",
+  "name": "rokid-framework-rn",
   "version": "0.6.0",
   "scripts": {
     "start": "node node_modules/react-native-rokid-module/local-cli/cli.js start"
@@ -7,7 +7,7 @@
   "dependencies": {
     "react": "15.1.0",
     "react-native": "0.27.2",
-    "react-native-rokid-module": "0.0.1"
+    "react-native-rokid-module": "0.0.2"
   },
   "description": "## The application framework for rokid based on react native",
   "main": "rokid/rkreact.js",

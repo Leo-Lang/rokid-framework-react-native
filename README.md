@@ -1,9 +1,9 @@
-#rokid-framework-react-native
+#rokid-framework-rn
 
 ## Installation
 
 ```
-npm i --save rokid-framework-react-native
+npm i --save rokid-framework-rn
 ```
 
 **on Android:**
@@ -11,14 +11,14 @@ npm i --save rokid-framework-react-native
 ####1. `android/settings.gradle`:: Add the following snippet
 
 ```
-include ":rokid-framework-react-native"
-project(':rokid-framework-react-native').projectDir = new File(rootProject.projectDir,'../node_modules/rokid-framework-react-native/android/rokid-framework-react-native')
+include ":rokid-framework-rn"
+project(':rokid-framework-rn').projectDir = new File(rootProject.projectDir,'../node_modules/rokid-framework-rn/android/rokid-framework-react-native')
 ```
 
 ####2. `android/app/build.gradle`: Add in dependencies block.
 
 ```
-compile project(':rokid-framework-react-native')
+compile project(':rokid-framework-rn')
 ```
 
 ####3. in your `MainActivity` (or equivalent) the FrameAnimReactPackage needs to be added. Add the import at the top:
@@ -46,7 +46,7 @@ protected List<ReactPackage> getPackages() {
 ###js
 
 ```
-import RKReactNative from 'rokid-framework-react-native';
+import RKReactNative from 'rokid-framework-rn';
 
 
 ```
