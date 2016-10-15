@@ -1,4 +1,5 @@
-var RKMobileNative = require("NativeModules").MobileService;
+var NativeModules = require('react-native').NativeModules;
+var RKMobileNative = NativeModules.MobileService;
 
 var RKMobile = {
     sendMessageToMobile:function(msg){

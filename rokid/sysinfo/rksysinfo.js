@@ -1,4 +1,5 @@
-var RKSysinfoService = require("NativeModules").SysinfoService;
+var NativeModules = require('react-native').NativeModules;
+var RKSysinfoService = NativeModules.SysinfoService;
 
 var sysinfoService= {
     getRokidSystemInfo:function(errorCallback,successCallback){

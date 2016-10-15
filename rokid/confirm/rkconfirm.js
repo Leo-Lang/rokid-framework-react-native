@@ -1,4 +1,5 @@
-var RKReactConfirmService = require("NativeModules").ConfirmService;
+var NativeModules = require('react-native').NativeModules;
+var RKReactConfirmService = NativeModules.ConfirmService;
 
 var confirmService= {
     confirmContent:function(domain,intent,ttsContent,slot,errorCalllback,successCallback){
