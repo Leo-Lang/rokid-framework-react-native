@@ -12,7 +12,8 @@
 
 
 //import rokid computer vision module RedqueenModule to local constant holder RKRedqueenService
-const RKRedqueenService = require('NativeModules').RedqueenModule;
+var NativeModules = require('react-native').NativeModules;
+var RKRedqueenService = NativeModules.RedqueenModule;
 
 //re-organize RKRedqueenService features to build a react native service module with name of redqueenService 
 var redqueenService ={

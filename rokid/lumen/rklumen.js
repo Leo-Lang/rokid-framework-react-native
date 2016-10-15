@@ -1,7 +1,9 @@
 
 'use strict';
 
-const LumenService = require('NativeModules').LumenService;
+var NativeModules = require('react-native').NativeModules;
+
+var LumenService = NativeModules.LumenService;
 
 var RKLumenService = {
 	getRgb:function(colorIndex, colorType) {

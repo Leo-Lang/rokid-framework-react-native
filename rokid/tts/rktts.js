@@ -1,6 +1,7 @@
 
 // var RKReactServiceManager = require('NativeModules').ReactServiceManager;
-var RKReactTTSService = require('NativeModules').ReactTTSService;
+var NativeModules = require('react-native').NativeModules;
+var RKReactTTSService = NativeModules.ReactTTSService;
 
 var ttsService ={
   tts:function(content,errorCalllback,successCallback){
