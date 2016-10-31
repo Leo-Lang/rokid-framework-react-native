@@ -18,7 +18,7 @@ import Confirm_demo from './rokid/example/rokid_confirm_demo';
 import Storage_demo from './rokid/example/storage_demo';
 import Mobile_demo from './rokid/example/rokid_mobile_demo';
 import Event_demo from './rokid/example/rokid_event_demo';
-import RKReactNative from 'rokid-framework-react-native';
+import RKReactNative from './rokid/rkreact';
 
 
 class rkreact extends Component {

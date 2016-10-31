@@ -7,8 +7,8 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
-import rokid.content.RokidContext;
 import rokid.os.IRKLumen;
+import rokid.service.util.RemoteServiceHelper;
 
 /**
  * Created by lujnan on 5/29/16.
@@ -19,7 +19,8 @@ public class LumenModule extends ReactContextBaseJavaModule implements Lifecycle
 
     public LumenModule(ReactApplicationContext reactContext) {
         super(reactContext);
-        mLumenService = (IRKLumen) RokidContext.getInstance().getSystemRemoteService(reactContext, RokidContext.LUMEN_SERVICE);
+        //mLumenService = (IRKLumen) RokidContext.getInstance().getSystemRemoteService(reactContext, RokidContext.LUMEN_SERVICE);
+        mLumenService = (IRKLumen) RemoteServiceHelper.instance().getService("lumen");
     }
 
     @Override
@@ -135,11 +136,13 @@ public class LumenModule extends ReactContextBaseJavaModule implements Lifecycle
      */
     @ReactMethod
     public void drawLumen(int color, float br, int layout, long durationMillisec) {
+        /*
         try {
             mLumenService.drawLumen(color, br, layout, durationMillisec);
         } catch (RemoteException e) {
             e.printStackTrace();
         }
+        */
     }
 
 }

@@ -28,12 +28,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.+'
-    //    compile 'com.facebook.react:react-native:0.22.2'
-    compile files('libs/gson-2.4.jar')
-    compile files('libs/rokid_sdk-20160908.jar')
+    //      compile files('libs/gson-2.4.jar')
+    //      compile files('libs/rokid_sdk-20161030.jar')
 
     compile project(':react-native-rokid-module')
-    //    compile files('libs/rokid_sdk.jar')
     //    compile files('libs/fastjson-1.1.34.android.jar')
     compile project(':rokidviewlibrary-release')
 }

@@ -1,18 +1,14 @@
 package com.leolang.rokidframework.nirvana.confirm;
 
-import android.content.Context;
 import android.os.RemoteException;
 import android.util.Log;
 
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableNativeMap;
-import com.facebook.react.bridge.WritableMap;
-import com.facebook.react.devsupport.DevServerHelper;
 import com.google.gson.Gson;
 
 import java.util.Map;
@@ -21,6 +17,7 @@ import rokid.content.RokidContext;
 import rokid.entities.RKConfirmObject;
 import rokid.entities.RKIntentObject;
 import rokid.os.RKConnectionUtil;
+import rokid.service.util.RemoteServiceHelper;
 
 /**
  * Created by langneng on 8/26/16.
@@ -118,11 +115,13 @@ public class ConfirmModule extends ReactContextBaseJavaModule {
 
     public void rkConnectionUtilInit() {
         if (mRKConnectionUtil == null) {
+            /*
             if (mRokidContext == null) {
                 mRokidContext = RokidContext.getInstance();
             }
-
             mRKConnectionUtil = (RKConnectionUtil) mRokidContext.getSystemRemoteService(mReactContext, RokidContext.CONNECTION_SERVICE);
+            */
+            mRKConnectionUtil = (RKConnectionUtil)  RemoteServiceHelper.instance().getService("rk_connection");
         }
     }
 }

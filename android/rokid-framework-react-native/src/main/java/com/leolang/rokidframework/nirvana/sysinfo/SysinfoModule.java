@@ -1,8 +1,5 @@
 package com.leolang.rokidframework.nirvana.sysinfo;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.RemoteException;
@@ -16,13 +13,11 @@ import com.facebook.react.bridge.ReactMethod;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-import rokid.content.RokidContext;
 import rokid.os.IRKAccountManager;
-import rokid.os.RKConnectionUtil;
 import rokid.os.RKSystemProperties;
+import rokid.service.util.RemoteServiceHelper;
 
 /**
  * Created by langneng on 8/26/16.
@@ -136,7 +131,8 @@ public class SysinfoModule extends ReactContextBaseJavaModule {
 
     private String getMaster(){
         IRKAccountManager accountProxy;
-        accountProxy = (IRKAccountManager) RokidContext.getInstance().getSystemRemoteService(mReactContext, RokidContext.RK_ACCOUNT);
+        //accountProxy = (IRKAccountManager) RokidContext.getInstance().getSystemRemoteService(mReactContext, RokidContext.RK_ACCOUNT);
+        accountProxy = (IRKAccountManager) RemoteServiceHelper.instance().getService("rk_account");
         JSONObject json =null;
         String masterId = "unknown";
         if (accountProxy != null) {

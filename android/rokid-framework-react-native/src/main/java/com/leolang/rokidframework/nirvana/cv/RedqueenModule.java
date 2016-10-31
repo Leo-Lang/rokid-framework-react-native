@@ -12,8 +12,8 @@ import com.leolang.rokidframework.react.RKReactActivity;
 
 import org.json.JSONObject;
 
-import rokid.content.RokidContext;
 import rokid.service.RKRedqueen;
+import rokid.service.util.RemoteServiceHelper;
 
 /**
  * Created by laoliang on 5/28/16.
@@ -59,7 +59,8 @@ public class RedqueenModule extends ReactContextBaseJavaModule implements Lifecy
 
     // initialize native cv redqueen service
     private void initRedqueen() {
-        mRedqueen = (RKRedqueen) RokidContext.getInstance().getSystemRemoteService(mReactContext, RokidContext.CV_SERVICE);
+        //mRedqueen = (RKRedqueen) RokidContext.getInstance().getSystemRemoteService(mReactContext, RokidContext.CV_SERVICE);
+        mRedqueen = (RKRedqueen) RemoteServiceHelper.instance().getService("cv");
         if(mRedqueen != null){
             //gesture results will be caught by this listener and handled by override interface onEvent of RKGestureEventListener
             RKReactActivity.setRKGestureEventListener(this);

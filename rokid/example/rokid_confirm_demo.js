@@ -15,7 +15,8 @@ import  {
     NativeModules
 } from 'react-native';
 
-import RKReactNative from 'rokid-framework-react-native';
+//import RKReactNative from 'rokid-framework-react-native';
+import RKReactNative from '../rkreact'
 
 class Confirm_demo extends React.Component{
   render() {
